@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Kanban Board</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg" />
+  </head>
+
+  <body>
+    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+    <nav class="nav">
+      <div class="nav__logo">
+        <img
+          src="/assets/favicon.svg"
+          alt="Kanban Logo"
+          width="24"
+          height="25"
+        />
+        <h1>Kanban</h1>
+      </div>
+
+      <div class="nav__nav-links nav__nav-links--mobile-hidden">
+        <h4>ALL BOARDS (1)</h4>
+        <button class="button-primary">Launch Career</button>
+      </div>
+    </nav>
+
+    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
+    <div>
+      <header class="header header--mobile-hidden">
+        <div>
+          <h1>Launch Career</h1>
+        </div>
+      </header>
+
+      <div>
+        <main>
+          <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
+          <div class="column">
+            <div class="column__label">
+              <span class="dot dot-blue"></span>
+              <h4>TO DO (4)</h4>
+            </div>
+            <!-- Tasks container for TODO -->
+            <div class="column__tasks-container">
+              <div class="task">Launch Epic Career 🚀</div>
+              <div class="task">Conquer React ⚛️</div>
+              <div class="task">Understand Databases ⚙️</div>
+              <div class="task">Crush Frameworks 🖼️</div>
+            </div>
+          </div>
+          <!-- DOING Column -->
+          <div class="column">
+            <div class="column__label">
+              <span class="dot dot-purple"></span>
+              <h4>DOING (2)</h4>
+            </div>
+            <!-- Tasks container for DOING -->
+            <div class="column__tasks-container">
+              <div class="task">Master JavaScript 💛</div>
+              <div class="task">Never Give Up 🏆</div>
+            </div>
+          </div>
+          <!-- DONE Column -->
+          <div class="column">
+            <div class="column__label">
+              <span class="dot dot-green"></span>
+              <h4>DONE (2)</h4>
+            </div>
+            <!-- Tasks container for DONE -->
+            <div class="column__tasks-container">
+              <div class="task">Explore ES6 Features 🚀</div>
+              <div class="task">Have fun 🥳</div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script defer src="script.js"></script>
+  </body>
+</html>
