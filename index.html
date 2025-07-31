@@ -82,6 +82,31 @@
         </main>
       </div>
     </div>
-    <script defer src="script.js"></script>
+    <!-- Modal -->
+    <div class="modal hidden">
+      <form id="modal-content" class="modal-content">
+        <div class="modal-label">
+          <h2>Task</h2>
+          <span id="close-btn">&times;</span>
+        </div>
+        <div class="modal-title">
+          <label for="modal-title"><h4>Title</h4></label>
+          <input type="text" id="modal-title" />
+        </div>
+        <div class="modal-description">
+          <label for="modal-description"><h4>Description</h4></label>
+          <input type="text" id="modal-description" />
+        </div>
+        <div class="modal-status">
+          <label for="modal-status"><h4>Status</h4></label>
+          <select name="modal-status" id="modal-status">
+            <option value="todo">todo</option>
+            <option value="doing">doing</option>
+            <option value="done">done</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
