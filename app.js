@@ -1,55 +1,41 @@
 import { tasks } from "./data.js";
 
-while (tasks.length < 6) {
-  addTask();
-  if (tasks.length == 6) {
-    alert(
-      "There are enough tasks on your board, please check them in the console."
-    );
-  }
-}
+const toDoList = document.getElementById("todo-list");
+const doingList = document.getElementById("doing-list");
+const doneList = document.getElementById("done-list");
 
-console.log("All tasks: ", tasks);
-logDoneTasks();
+//render all tasks on app load
+tasks.forEach(renderTask);
 
-//Funciton prompts user for task details, creates task object and adds it to tasks array
-function addTask() {
-  //Creates unique, incremental ID based on the last task in the array
-  const id = tasks[tasks.length - 1].id + 1;
+/**
+ * @typedef {Object} Task
+ * @property {number} id - The tasks ID.
+ * @property {string} title - The task's title.
+ * @property {string} description - The task's description.
+ * @property {string} status - The tasks's status - "todo", "doing, or "done".
+ */
+/**
+ * Renders a task in its appropriate column on the document.
+ * @param {Task} task - The task Object
+ */
+function renderTask(task) {
+  const renderedTask = document.createElement("div");
+  renderedTask.classList.add("task");
 
-  const title = prompt(`Enter task ${id} title:`);
-  const description = prompt(`Enter task ${id} description:`);
+  renderedTask.innerText = task.title;
+  renderedTask.setAttribute("data-id", task.id);
 
-  let taskStatus;
-  let validStatus = false;
+  switch (task.status) {
+    case "todo":
+      toDoList.appendChild(renderedTask);
+      break;
 
-  //validates status input, repeatedly prompts the user until a valid status is entered.
-  do {
-    taskStatus = prompt(`Enter task ${id} status:`).toLowerCase();
-    if (taskStatus != "todo" && taskStatus != "doing" && taskStatus != "done") {
-      alert("Invalid status. Please enter 'todo', 'doing', or 'done'");
-    } else {
-      validStatus = true;
-    }
-  } while (validStatus == false);
+    case "doing":
+      doingList.appendChild(renderedTask);
+      break;
 
-  const task = {
-    id: id,
-    title: title,
-    description: description,
-    status: taskStatus,
-  };
-  tasks.push(task);
-}
-
-function logDoneTasks() {
-  //Creates an array of done tasks by filtering the array "tasks"
-  const doneTasks = tasks.filter((task) => task.status == "done");
-
-  // Logs array of done tasks if there are completed tasks, otherwise logs motivational message
-  if (doneTasks.length > 0) {
-    console.log("Completed tasks: ", doneTasks);
-  } else {
-    console.log("No tasks completed, let's get to work!");
+    case "done":
+      doneList.appendChild(renderedTask);
+      break;
   }
 }

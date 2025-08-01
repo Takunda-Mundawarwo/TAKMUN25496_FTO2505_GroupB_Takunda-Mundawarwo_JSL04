@@ -48,12 +48,7 @@
               <h4>TO DO (4)</h4>
             </div>
             <!-- Tasks container for TODO -->
-            <div class="column__tasks-container">
-              <div class="task">Launch Epic Career 🚀</div>
-              <div class="task">Conquer React ⚛️</div>
-              <div class="task">Understand Databases ⚙️</div>
-              <div class="task">Crush Frameworks 🖼️</div>
-            </div>
+            <div class="column__tasks-container" id="todo-list"></div>
           </div>
           <!-- DOING Column -->
           <div class="column">
@@ -62,10 +57,7 @@
               <h4>DOING (2)</h4>
             </div>
             <!-- Tasks container for DOING -->
-            <div class="column__tasks-container">
-              <div class="task">Master JavaScript 💛</div>
-              <div class="task">Never Give Up 🏆</div>
-            </div>
+            <div class="column__tasks-container" id="doing-list"></div>
           </div>
           <!-- DONE Column -->
           <div class="column">
@@ -74,16 +66,13 @@
               <h4>DONE (2)</h4>
             </div>
             <!-- Tasks container for DONE -->
-            <div class="column__tasks-container">
-              <div class="task">Explore ES6 Features 🚀</div>
-              <div class="task">Have fun 🥳</div>
-            </div>
+            <div class="column__tasks-container" id="done-list"></div>
           </div>
         </main>
       </div>
     </div>
     <!-- Modal -->
-    <div class="modal hidden">
+    <div class="modal hidden" id="modal">
       <form id="modal-content" class="modal-content">
         <div class="modal-label">
           <h2>Task</h2>
