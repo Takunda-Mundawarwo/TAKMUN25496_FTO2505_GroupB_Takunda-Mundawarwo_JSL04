@@ -25,6 +25,18 @@ tasksSection.addEventListener("click", function (event) {
   }
 });
 
+// Close modal
+closeBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+//Close modal on ESC key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    modal.classList.add("hidden");
+  }
+});
+
 /**
  * @typedef {Object} Task
  * @property {number} id - The tasks ID.
