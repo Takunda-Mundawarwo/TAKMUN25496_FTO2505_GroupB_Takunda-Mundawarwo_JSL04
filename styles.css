@@ -196,6 +196,10 @@
   .modal-status > select {
     cursor: pointer;
   }
+
+  .hidden {
+    display: none;
+  }
 }
 
 @layer layout {
