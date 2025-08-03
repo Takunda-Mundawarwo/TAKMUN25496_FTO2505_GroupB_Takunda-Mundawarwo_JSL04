@@ -1,6 +1,6 @@
-# JSL03: Console-based Task Manager
+# Kanban Board Dynamic Task Display & Modal View
 
-This project builds on the JSL02 project, adding a simple task management system where users can add up to three new tasks to an existing task array. A additional new feature is the implemementation of an unique, incremental ID for each of the tasks. Once 6 tasks are entered, the system displays the array containing all of the tasks as well as an array of all completed tasks in the console.
+This project dynamically displays tasks from a data set onto a Kanban board. The tasks are sorted status into columns ("To Do", "In Progress", "Done"), and open a modal when clicked, allowing users to view/edit the task title, description and status.
 
 ---
 
@@ -10,18 +10,28 @@ This project builds on the JSL02 project, adding a simple task management system
 
 ---
 
+## Features
+
+1. **Dynamic Task Rendering:** All tasks are dynamically rendered using JavaScript
+
+2. **Task Sorting:** Tasks are dynamically place into the correct columns based on their status: "todo", "doing", or "done".
+
+3. **Modal:** A responsive modal with editable fields for task title, and description as well as a dropdown for status. The modal also features a functional close button &
+
+---
+
 ## Installation and Setup Guide
 
 1. Clone the repository:
 
 ```bash
- $ git clone https://github.com/Takunda-Mundawarwo/TAKMUN25496_FTO2505_GroupB_Takunda-Mundawarwo_JSL02.git
+ $ git clone https://github.com/Takunda-Mundawarwo/TAKMUN25496_FTO2505_GroupB_Takunda-Mundawarwo_JSL04.git
 ```
 
 2. Navigate to the directory:
 
 ```bash
-$ cd TAKMUN25496_FTO2505_GroupB_Takunda-Mundawarwo_JSL02
+$ cd TAKMUN25496_FTO2505_GroupB_Takunda-Mundawarwo_JSL04
 ```
 
 3. Start the server:
